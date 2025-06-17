@@ -1,0 +1,485 @@
+.font-1 * { font-size: 1px }
+.font-2 * { font-size: 2px }
+.font-3 * { font-size: 3px }
+.font-4 * { font-size: 4px }
+.font-5 * { font-size: 5px }
+.font-6 * { font-size: 6px }
+.font-7 * { font-size: 7px }
+.font-8 * { font-size: 8px }
+.font-9 * { font-size: 9px }
+.font-10 * { font-size: 10px }
+.font-11 * { font-size: 11px }
+.font-12 * { font-size: 12px }
+.font-13 * { font-size: 13px }
+.font-14 * { font-size: 14px }
+.font-15 * { font-size: 15px }
+.font-16 * { font-size: 16px }
+.font-17 * { font-size: 17px }
+.font-18 * { font-size: 18px }
+.font-19 * { font-size: 19px }
+.font-20 * { font-size: 20px }
+.font-21 * { font-size: 21px }
+.font-22 * { font-size: 22px }
+.font-23 * { font-size: 23px }
+.font-24 * { font-size: 24px }
+.font-25 * { font-size: 25px }
+.font-26 * { font-size: 26px }
+.font-27 * { font-size: 27px }
+.font-28 * { font-size: 28px }
+.font-29 * { font-size: 29px }
+.font-30 * { font-size: 30px }
+.font-31 * { font-size: 31px }
+.font-32 * { font-size: 32px }
+.font-33 * { font-size: 33px }
+.font-34 * { font-size: 34px }
+.font-35 * { font-size: 35px }
+.font-36 * { font-size: 36px }
+.font-37 * { font-size: 37px }
+.font-38 * { font-size: 38px }
+.font-39 * { font-size: 39px }
+.font-40 * { font-size: 40px }
+.font-41 * { font-size: 41px }
+.font-42 * { font-size: 42px }
+.font-43 * { font-size: 43px }
+.font-44 * { font-size: 44px }
+.font-45 * { font-size: 45px }
+.font-46 * { font-size: 46px }
+.font-47 * { font-size: 47px }
+.font-48 * { font-size: 48px }
+.font-49 * { font-size: 49px }
+.font-50 * { font-size: 50px }
+.font-51 * { font-size: 51px }
+.font-52 * { font-size: 52px }
+.font-53 * { font-size: 53px }
+.font-54 * { font-size: 54px }
+.font-55 * { font-size: 55px }
+.font-56 * { font-size: 56px }
+.font-57 * { font-size: 57px }
+.font-58 * { font-size: 58px }
+.font-59 * { font-size: 59px }
+.font-60 * { font-size: 60px }
+.font-61 * { font-size: 61px }
+.font-62 * { font-size: 62px }
+.font-63 * { font-size: 63px }
+.font-64 * { font-size: 64px }
+.font-65 * { font-size: 65px }
+.font-66 * { font-size: 66px }
+.font-67 * { font-size: 67px }
+.font-68 * { font-size: 68px }
+.font-69 * { font-size: 69px }
+.font-70 * { font-size: 70px }
+.font-71 * { font-size: 71px }
+.font-72 * { font-size: 72px }
+.font-73 * { font-size: 73px }
+.font-74 * { font-size: 74px }
+.font-75 * { font-size: 75px }
+.font-76 * { font-size: 76px }
+.font-77 * { font-size: 77px }
+.font-78 * { font-size: 78px }
+.font-79 * { font-size: 79px }
+.font-80 * { font-size: 80px }
+
+.font-1 *:after { font-size: 1px }
+.font-2 *:after { font-size: 2px }
+.font-3 *:after { font-size: 3px }
+.font-4 *:after { font-size: 4px }
+.font-5 *:after { font-size: 5px }
+.font-6 *:after { font-size: 6px }
+.font-7 *:after { font-size: 7px }
+.font-8 *:after { font-size: 8px }
+.font-9 *:after { font-size: 9px }
+.font-10 *:after { font-size: 10px }
+.font-11 *:after { font-size: 11px }
+.font-12 *:after { font-size: 12px }
+.font-13 *:after { font-size: 13px }
+.font-14 *:after { font-size: 14px }
+.font-15 *:after { font-size: 15px }
+.font-16 *:after { font-size: 16px }
+.font-17 *:after { font-size: 17px }
+.font-18 *:after { font-size: 18px }
+.font-19 *:after { font-size: 19px }
+.font-20 *:after { font-size: 20px }
+.font-21 *:after { font-size: 21px }
+.font-22 *:after { font-size: 22px }
+.font-23 *:after { font-size: 23px }
+.font-24 *:after { font-size: 24px }
+.font-25 *:after { font-size: 25px }
+.font-26 *:after { font-size: 26px }
+.font-27 *:after { font-size: 27px }
+.font-28 *:after { font-size: 28px }
+.font-29 *:after { font-size: 29px }
+.font-30 *:after { font-size: 30px }
+.font-31 *:after { font-size: 31px }
+.font-32 *:after { font-size: 32px }
+.font-33 *:after { font-size: 33px }
+.font-34 *:after { font-size: 34px }
+.font-35 *:after { font-size: 35px }
+.font-36 *:after { font-size: 36px }
+.font-37 *:after { font-size: 37px }
+.font-38 *:after { font-size: 38px }
+.font-39 *:after { font-size: 39px }
+.font-40 *:after { font-size: 40px }
+.font-41 *:after { font-size: 41px }
+.font-42 *:after { font-size: 42px }
+.font-43 *:after { font-size: 43px }
+.font-44 *:after { font-size: 44px }
+.font-45 *:after { font-size: 45px }
+.font-46 *:after { font-size: 46px }
+.font-47 *:after { font-size: 47px }
+.font-48 *:after { font-size: 48px }
+.font-49 *:after { font-size: 49px }
+.font-50 *:after { font-size: 50px }
+.font-51 *:after { font-size: 51px }
+.font-52 *:after { font-size: 52px }
+.font-53 *:after { font-size: 53px }
+.font-54 *:after { font-size: 54px }
+.font-55 *:after { font-size: 55px }
+.font-56 *:after { font-size: 56px }
+.font-57 *:after { font-size: 57px }
+.font-58 *:after { font-size: 58px }
+.font-59 *:after { font-size: 59px }
+.font-60 *:after { font-size: 60px }
+.font-61 *:after { font-size: 61px }
+.font-62 *:after { font-size: 62px }
+.font-63 *:after { font-size: 63px }
+.font-64 *:after { font-size: 64px }
+.font-65 *:after { font-size: 65px }
+.font-66 *:after { font-size: 66px }
+.font-67 *:after { font-size: 67px }
+.font-68 *:after { font-size: 68px }
+.font-69 *:after { font-size: 69px }
+.font-70 *:after { font-size: 70px }
+.font-71 *:after { font-size: 71px }
+.font-72 *:after { font-size: 72px }
+.font-73 *:after { font-size: 73px }
+.font-74 *:after { font-size: 74px }
+.font-75 *:after { font-size: 75px }
+.font-76 *:after { font-size: 76px }
+.font-77 *:after { font-size: 77px }
+.font-78 *:after { font-size: 78px }
+.font-79 *:after { font-size: 79px }
+.font-80 *:after { font-size: 80px }
+
+.font-1 *:before { font-size: 1px }
+.font-2 *:before { font-size: 2px }
+.font-3 *:before { font-size: 3px }
+.font-4 *:before { font-size: 4px }
+.font-5 *:before { font-size: 5px }
+.font-6 *:before { font-size: 6px }
+.font-7 *:before { font-size: 7px }
+.font-8 *:before { font-size: 8px }
+.font-9 *:before { font-size: 9px }
+.font-10 *:before { font-size: 10px }
+.font-11 *:before { font-size: 11px }
+.font-12 *:before { font-size: 12px }
+.font-13 *:before { font-size: 13px }
+.font-14 *:before { font-size: 14px }
+.font-15 *:before { font-size: 15px }
+.font-16 *:before { font-size: 16px }
+.font-17 *:before { font-size: 17px }
+.font-18 *:before { font-size: 18px }
+.font-19 *:before { font-size: 19px }
+.font-20 *:before { font-size: 20px }
+.font-21 *:before { font-size: 21px }
+.font-22 *:before { font-size: 22px }
+.font-23 *:before { font-size: 23px }
+.font-24 *:before { font-size: 24px }
+.font-25 *:before { font-size: 25px }
+.font-26 *:before { font-size: 26px }
+.font-27 *:before { font-size: 27px }
+.font-28 *:before { font-size: 28px }
+.font-29 *:before { font-size: 29px }
+.font-30 *:before { font-size: 30px }
+.font-31 *:before { font-size: 31px }
+.font-32 *:before { font-size: 32px }
+.font-33 *:before { font-size: 33px }
+.font-34 *:before { font-size: 34px }
+.font-35 *:before { font-size: 35px }
+.font-36 *:before { font-size: 36px }
+.font-37 *:before { font-size: 37px }
+.font-38 *:before { font-size: 38px }
+.font-39 *:before { font-size: 39px }
+.font-40 *:before { font-size: 40px }
+.font-41 *:before { font-size: 41px }
+.font-42 *:before { font-size: 42px }
+.font-43 *:before { font-size: 43px }
+.font-44 *:before { font-size: 44px }
+.font-45 *:before { font-size: 45px }
+.font-46 *:before { font-size: 46px }
+.font-47 *:before { font-size: 47px }
+.font-48 *:before { font-size: 48px }
+.font-49 *:before { font-size: 49px }
+.font-50 *:before { font-size: 50px }
+.font-51 *:before { font-size: 51px }
+.font-52 *:before { font-size: 52px }
+.font-53 *:before { font-size: 53px }
+.font-54 *:before { font-size: 54px }
+.font-55 *:before { font-size: 55px }
+.font-56 *:before { font-size: 56px }
+.font-57 *:before { font-size: 57px }
+.font-58 *:before { font-size: 58px }
+.font-59 *:before { font-size: 59px }
+.font-60 *:before { font-size: 60px }
+.font-61 *:before { font-size: 61px }
+.font-62 *:before { font-size: 62px }
+.font-63 *:before { font-size: 63px }
+.font-64 *:before { font-size: 64px }
+.font-65 *:before { font-size: 65px }
+.font-66 *:before { font-size: 66px }
+.font-67 *:before { font-size: 67px }
+.font-68 *:before { font-size: 68px }
+.font-69 *:before { font-size: 69px }
+.font-70 *:before { font-size: 70px }
+.font-71 *:before { font-size: 71px }
+.font-72 *:before { font-size: 72px }
+.font-73 *:before { font-size: 73px }
+.font-74 *:before { font-size: 74px }
+.font-75 *:before { font-size: 75px }
+.font-76 *:before { font-size: 76px }
+.font-77 *:before { font-size: 77px }
+.font-78 *:before { font-size: 78px }
+.font-79 *:before { font-size: 79px }
+.font-80 *:before { font-size: 80px }
+
+.font-1 { font-size: 1px }
+.font-2 { font-size: 2px }
+.font-3 { font-size: 3px }
+.font-4 { font-size: 4px }
+.font-5 { font-size: 5px }
+.font-6 { font-size: 6px }
+.font-7 { font-size: 7px }
+.font-8 { font-size: 8px }
+.font-9 { font-size: 9px }
+.font-10 { font-size: 10px }
+.font-11 { font-size: 11px }
+.font-12 { font-size: 12px }
+.font-13 { font-size: 13px }
+.font-14 { font-size: 14px }
+.font-15 { font-size: 15px }
+.font-16 { font-size: 16px }
+.font-17 { font-size: 17px }
+.font-18 { font-size: 18px }
+.font-19 { font-size: 19px }
+.font-20 { font-size: 20px }
+.font-21 { font-size: 21px }
+.font-22 { font-size: 22px }
+.font-23 { font-size: 23px }
+.font-24 { font-size: 24px }
+.font-25 { font-size: 25px }
+.font-26 { font-size: 26px }
+.font-27 { font-size: 27px }
+.font-28 { font-size: 28px }
+.font-29 { font-size: 29px }
+.font-30 { font-size: 30px }
+.font-31 { font-size: 31px }
+.font-32 { font-size: 32px }
+.font-33 { font-size: 33px }
+.font-34 { font-size: 34px }
+.font-35 { font-size: 35px }
+.font-36 { font-size: 36px }
+.font-37 { font-size: 37px }
+.font-38 { font-size: 38px }
+.font-39 { font-size: 39px }
+.font-40 { font-size: 40px }
+.font-41 { font-size: 41px }
+.font-42 { font-size: 42px }
+.font-43 { font-size: 43px }
+.font-44 { font-size: 44px }
+.font-45 { font-size: 45px }
+.font-46 { font-size: 46px }
+.font-47 { font-size: 47px }
+.font-48 { font-size: 48px }
+.font-49 { font-size: 49px }
+.font-50 { font-size: 50px }
+.font-51 { font-size: 51px }
+.font-52 { font-size: 52px }
+.font-53 { font-size: 53px }
+.font-54 { font-size: 54px }
+.font-55 { font-size: 55px }
+.font-56 { font-size: 56px }
+.font-57 { font-size: 57px }
+.font-58 { font-size: 58px }
+.font-59 { font-size: 59px }
+.font-60 { font-size: 60px }
+.font-61 { font-size: 61px }
+.font-62 { font-size: 62px }
+.font-63 { font-size: 63px }
+.font-64 { font-size: 64px }
+.font-65 { font-size: 65px }
+.font-66 { font-size: 66px }
+.font-67 { font-size: 67px }
+.font-68 { font-size: 68px }
+.font-69 { font-size: 69px }
+.font-70 { font-size: 70px }
+.font-71 { font-size: 71px }
+.font-72 { font-size: 72px }
+.font-73 { font-size: 73px }
+.font-74 { font-size: 74px }
+.font-75 { font-size: 75px }
+.font-76 { font-size: 76px }
+.font-77 { font-size: 77px }
+.font-78 { font-size: 78px }
+.font-79 { font-size: 79px }
+.font-80 { font-size: 80px }
+
+.font-1:after { font-size: 1px }
+.font-2:after { font-size: 2px }
+.font-3:after { font-size: 3px }
+.font-4:after { font-size: 4px }
+.font-5:after { font-size: 5px }
+.font-6:after { font-size: 6px }
+.font-7:after { font-size: 7px }
+.font-8:after { font-size: 8px }
+.font-9:after { font-size: 9px }
+.font-10:after { font-size: 10px }
+.font-11:after { font-size: 11px }
+.font-12:after { font-size: 12px }
+.font-13:after { font-size: 13px }
+.font-14:after { font-size: 14px }
+.font-15:after { font-size: 15px }
+.font-16:after { font-size: 16px }
+.font-17:after { font-size: 17px }
+.font-18:after { font-size: 18px }
+.font-19:after { font-size: 19px }
+.font-20:after { font-size: 20px }
+.font-21:after { font-size: 21px }
+.font-22:after { font-size: 22px }
+.font-23:after { font-size: 23px }
+.font-24:after { font-size: 24px }
+.font-25:after { font-size: 25px }
+.font-26:after { font-size: 26px }
+.font-27:after { font-size: 27px }
+.font-28:after { font-size: 28px }
+.font-29:after { font-size: 29px }
+.font-30:after { font-size: 30px }
+.font-31:after { font-size: 31px }
+.font-32:after { font-size: 32px }
+.font-33:after { font-size: 33px }
+.font-34:after { font-size: 34px }
+.font-35:after { font-size: 35px }
+.font-36:after { font-size: 36px }
+.font-37:after { font-size: 37px }
+.font-38:after { font-size: 38px }
+.font-39:after { font-size: 39px }
+.font-40:after { font-size: 40px }
+.font-41:after { font-size: 41px }
+.font-42:after { font-size: 42px }
+.font-43:after { font-size: 43px }
+.font-44:after { font-size: 44px }
+.font-45:after { font-size: 45px }
+.font-46:after { font-size: 46px }
+.font-47:after { font-size: 47px }
+.font-48:after { font-size: 48px }
+.font-49:after { font-size: 49px }
+.font-50:after { font-size: 50px }
+.font-51:after { font-size: 51px }
+.font-52:after { font-size: 52px }
+.font-53:after { font-size: 53px }
+.font-54:after { font-size: 54px }
+.font-55:after { font-size: 55px }
+.font-56:after { font-size: 56px }
+.font-57:after { font-size: 57px }
+.font-58:after { font-size: 58px }
+.font-59:after { font-size: 59px }
+.font-60:after { font-size: 60px }
+.font-61:after { font-size: 61px }
+.font-62:after { font-size: 62px }
+.font-63:after { font-size: 63px }
+.font-64:after { font-size: 64px }
+.font-65:after { font-size: 65px }
+.font-66:after { font-size: 66px }
+.font-67:after { font-size: 67px }
+.font-68:after { font-size: 68px }
+.font-69:after { font-size: 69px }
+.font-70:after { font-size: 70px }
+.font-71:after { font-size: 71px }
+.font-72:after { font-size: 72px }
+.font-73:after { font-size: 73px }
+.font-74:after { font-size: 74px }
+.font-75:after { font-size: 75px }
+.font-76:after { font-size: 76px }
+.font-77:after { font-size: 77px }
+.font-78:after { font-size: 78px }
+.font-79:after { font-size: 79px }
+.font-80:after { font-size: 80px }
+
+.font-1:before { font-size: 1px }
+.font-2:before { font-size: 2px }
+.font-3:before { font-size: 3px }
+.font-4:before { font-size: 4px }
+.font-5:before { font-size: 5px }
+.font-6:before { font-size: 6px }
+.font-7:before { font-size: 7px }
+.font-8:before { font-size: 8px }
+.font-9:before { font-size: 9px }
+.font-10:before { font-size: 10px }
+.font-11:before { font-size: 11px }
+.font-12:before { font-size: 12px }
+.font-13:before { font-size: 13px }
+.font-14:before { font-size: 14px }
+.font-15:before { font-size: 15px }
+.font-16:before { font-size: 16px }
+.font-17:before { font-size: 17px }
+.font-18:before { font-size: 18px }
+.font-19:before { font-size: 19px }
+.font-20:before { font-size: 20px }
+.font-21:before { font-size: 21px }
+.font-22:before { font-size: 22px }
+.font-23:before { font-size: 23px }
+.font-24:before { font-size: 24px }
+.font-25:before { font-size: 25px }
+.font-26:before { font-size: 26px }
+.font-27:before { font-size: 27px }
+.font-28:before { font-size: 28px }
+.font-29:before { font-size: 29px }
+.font-30:before { font-size: 30px }
+.font-31:before { font-size: 31px }
+.font-32:before { font-size: 32px }
+.font-33:before { font-size: 33px }
+.font-34:before { font-size: 34px }
+.font-35:before { font-size: 35px }
+.font-36:before { font-size: 36px }
+.font-37:before { font-size: 37px }
+.font-38:before { font-size: 38px }
+.font-39:before { font-size: 39px }
+.font-40:before { font-size: 40px }
+.font-41:before { font-size: 41px }
+.font-42:before { font-size: 42px }
+.font-43:before { font-size: 43px }
+.font-44:before { font-size: 44px }
+.font-45:before { font-size: 45px }
+.font-46:before { font-size: 46px }
+.font-47:before { font-size: 47px }
+.font-48:before { font-size: 48px }
+.font-49:before { font-size: 49px }
+.font-50:before { font-size: 50px }
+.font-51:before { font-size: 51px }
+.font-52:before { font-size: 52px }
+.font-53:before { font-size: 53px }
+.font-54:before { font-size: 54px }
+.font-55:before { font-size: 55px }
+.font-56:before { font-size: 56px }
+.font-57:before { font-size: 57px }
+.font-58:before { font-size: 58px }
+.font-59:before { font-size: 59px }
+.font-60:before { font-size: 60px }
+.font-61:before { font-size: 61px }
+.font-62:before { font-size: 62px }
+.font-63:before { font-size: 63px }
+.font-64:before { font-size: 64px }
+.font-65:before { font-size: 65px }
+.font-66:before { font-size: 66px }
+.font-67:before { font-size: 67px }
+.font-68:before { font-size: 68px }
+.font-69:before { font-size: 69px }
+.font-70:before { font-size: 70px }
+.font-71:before { font-size: 71px }
+.font-72:before { font-size: 72px }
+.font-73:before { font-size: 73px }
+.font-74:before { font-size: 74px }
+.font-75:before { font-size: 75px }
+.font-76:before { font-size: 76px }
+.font-77:before { font-size: 77px }
+.font-78:before { font-size: 78px }
+.font-79:before { font-size: 79px }
+.font-80:before { font-size: 80px }

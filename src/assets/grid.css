@@ -1,0 +1,169 @@
+.grid { display: grid; }
+
+.g-cols-1 { grid-template-columns: repeat(1, 1fr) }
+.g-cols-2 { grid-template-columns: repeat(2, 1fr) }
+.g-cols-3 { grid-template-columns: repeat(3, 1fr) }
+.g-cols-4 { grid-template-columns: repeat(4, 1fr) }
+.g-cols-5 { grid-template-columns: repeat(5, 1fr) }
+.g-cols-6 { grid-template-columns: repeat(6, 1fr) }
+.g-cols-7 { grid-template-columns: repeat(7, 1fr) }
+.g-cols-8 { grid-template-columns: repeat(8, 1fr) }
+.g-cols-9 { grid-template-columns: repeat(9, 1fr) }
+.g-cols-10 { grid-template-columns: repeat(10, 1fr) }
+.g-cols-11 { grid-template-columns: repeat(11, 1fr) }
+.g-cols-12 { grid-template-columns: repeat(12, 1fr) }
+.g-cols-13 { grid-template-columns: repeat(13, 1fr) }
+.g-cols-14 { grid-template-columns: repeat(14, 1fr) }
+.g-cols-15 { grid-template-columns: repeat(15, 1fr) }
+.g-cols-16 { grid-template-columns: repeat(16, 1fr) }
+.g-cols-17 { grid-template-columns: repeat(17, 1fr) }
+.g-cols-18 { grid-template-columns: repeat(18, 1fr) }
+.g-cols-19 { grid-template-columns: repeat(19, 1fr) }
+.g-cols-20 { grid-template-columns: repeat(20, 1fr) }
+
+.g-rows-1 { grid-template-rows: repeat(1, 1fr) }
+.g-rows-2 { grid-template-rows: repeat(2, 1fr) }
+.g-rows-3 { grid-template-rows: repeat(3, 1fr) }
+.g-rows-4 { grid-template-rows: repeat(4, 1fr) }
+.g-rows-5 { grid-template-rows: repeat(5, 1fr) }
+.g-rows-6 { grid-template-rows: repeat(6, 1fr) }
+.g-rows-7 { grid-template-rows: repeat(7, 1fr) }
+.g-rows-8 { grid-template-rows: repeat(8, 1fr) }
+.g-rows-9 { grid-template-rows: repeat(9, 1fr) }
+.g-rows-10 { grid-template-rows: repeat(10, 1fr) }
+.g-rows-11 { grid-template-rows: repeat(11, 1fr) }
+.g-rows-12 { grid-template-rows: repeat(12, 1fr) }
+.g-rows-13 { grid-template-rows: repeat(13, 1fr) }
+.g-rows-14 { grid-template-rows: repeat(14, 1fr) }
+.g-rows-15 { grid-template-rows: repeat(15, 1fr) }
+.g-rows-16 { grid-template-rows: repeat(16, 1fr) }
+.g-rows-17 { grid-template-rows: repeat(17, 1fr) }
+.g-rows-18 { grid-template-rows: repeat(18, 1fr) }
+.g-rows-19 { grid-template-rows: repeat(19, 1fr) }
+.g-rows-20 { grid-template-rows: repeat(20, 1fr) }
+
+.g-col-1 { grid-column: span 1 }
+.g-col-2 { grid-column: span 2 }
+.g-col-3 { grid-column: span 3 }
+.g-col-4 { grid-column: span 4 }
+.g-col-5 { grid-column: span 5 }
+.g-col-6 { grid-column: span 6 }
+.g-col-7 { grid-column: span 7 }
+.g-col-8 { grid-column: span 8 }
+.g-col-9 { grid-column: span 9 }
+.g-col-10 { grid-column: span 10 }
+.g-col-11 { grid-column: span 11 }
+.g-col-12 { grid-column: span 12 }
+.g-col-13 { grid-column: span 13 }
+.g-col-14 { grid-column: span 14 }
+.g-col-15 { grid-column: span 15 }
+.g-col-16 { grid-column: span 16 }
+.g-col-17 { grid-column: span 17 }
+.g-col-18 { grid-column: span 18 }
+.g-col-19 { grid-column: span 19 }
+.g-col-20 { grid-column: span 20 }
+
+.g-row-1 { grid-row: span 1 }
+.g-row-2 { grid-row: span 2 }
+.g-row-3 { grid-row: span 3 }
+.g-row-4 { grid-row: span 4 }
+.g-row-5 { grid-row: span 5 }
+.g-row-6 { grid-row: span 6 }
+.g-row-7 { grid-row: span 7 }
+.g-row-8 { grid-row: span 8 }
+.g-row-9 { grid-row: span 9 }
+.g-row-10 { grid-row: span 10 }
+.g-row-11 { grid-row: span 11 }
+.g-row-12 { grid-row: span 12 }
+.g-row-13 { grid-row: span 13 }
+.g-row-14 { grid-row: span 14 }
+.g-row-15 { grid-row: span 15 }
+.g-row-16 { grid-row: span 16 }
+.g-row-17 { grid-row: span 17 }
+.g-row-18 { grid-row: span 18 }
+.g-row-19 { grid-row: span 19 }
+.g-row-20 { grid-row: span 20 }
+
+.g-col-start-1 { grid-column-start: 1 }
+.g-col-start-2 { grid-column-start: 2 }
+.g-col-start-3 { grid-column-start: 3 }
+.g-col-start-4 { grid-column-start: 4 }
+.g-col-start-5 { grid-column-start: 5 }
+.g-col-start-6 { grid-column-start: 6 }
+.g-col-start-7 { grid-column-start: 7 }
+.g-col-start-8 { grid-column-start: 8 }
+.g-col-start-9 { grid-column-start: 9 }
+.g-col-start-10 { grid-column-start: 10 }
+.g-col-start-11 { grid-column-start: 11 }
+.g-col-start-12 { grid-column-start: 12 }
+.g-col-start-13 { grid-column-start: 13 }
+.g-col-start-14 { grid-column-start: 14 }
+.g-col-start-15 { grid-column-start: 15 }
+.g-col-start-16 { grid-column-start: 16 }
+.g-col-start-17 { grid-column-start: 17 }
+.g-col-start-18 { grid-column-start: 18 }
+.g-col-start-19 { grid-column-start: 19 }
+.g-col-start-20 { grid-column-start: 20 }
+
+.g-col-end-1 { grid-column-end: 1 }
+.g-col-end-2 { grid-column-end: 2 }
+.g-col-end-3 { grid-column-end: 3 }
+.g-col-end-4 { grid-column-end: 4 }
+.g-col-end-5 { grid-column-end: 5 }
+.g-col-end-6 { grid-column-end: 6 }
+.g-col-end-7 { grid-column-end: 7 }
+.g-col-end-8 { grid-column-end: 8 }
+.g-col-end-9 { grid-column-end: 9 }
+.g-col-end-10 { grid-column-end: 10 }
+.g-col-end-11 { grid-column-end: 11 }
+.g-col-end-12 { grid-column-end: 12 }
+.g-col-end-13 { grid-column-end: 13 }
+.g-col-end-14 { grid-column-end: 14 }
+.g-col-end-15 { grid-column-end: 15 }
+.g-col-end-16 { grid-column-end: 16 }
+.g-col-end-17 { grid-column-end: 17 }
+.g-col-end-18 { grid-column-end: 18 }
+.g-col-end-19 { grid-column-end: 19 }
+.g-col-end-20 { grid-column-end: 20 }
+
+.g-row-start-1 { grid-row-start: 1 }
+.g-row-start-2 { grid-row-start: 2 }
+.g-row-start-3 { grid-row-start: 3 }
+.g-row-start-4 { grid-row-start: 4 }
+.g-row-start-5 { grid-row-start: 5 }
+.g-row-start-6 { grid-row-start: 6 }
+.g-row-start-7 { grid-row-start: 7 }
+.g-row-start-8 { grid-row-start: 8 }
+.g-row-start-9 { grid-row-start: 9 }
+.g-row-start-10 { grid-row-start: 10 }
+.g-row-start-11 { grid-row-start: 11 }
+.g-row-start-12 { grid-row-start: 12 }
+.g-row-start-13 { grid-row-start: 13 }
+.g-row-start-14 { grid-row-start: 14 }
+.g-row-start-15 { grid-row-start: 15 }
+.g-row-start-16 { grid-row-start: 16 }
+.g-row-start-17 { grid-row-start: 17 }
+.g-row-start-18 { grid-row-start: 18 }
+.g-row-start-19 { grid-row-start: 19 }
+.g-row-start-20 { grid-row-start: 20 }
+
+.g-row-end-1 { grid-row-end: 1 }
+.g-row-end-2 { grid-row-end: 2 }
+.g-row-end-3 { grid-row-end: 3 }
+.g-row-end-4 { grid-row-end: 4 }
+.g-row-end-5 { grid-row-end: 5 }
+.g-row-end-6 { grid-row-end: 6 }
+.g-row-end-7 { grid-row-end: 7 }
+.g-row-end-8 { grid-row-end: 8 }
+.g-row-end-9 { grid-row-end: 9 }
+.g-row-end-10 { grid-row-end: 10 }
+.g-row-end-11 { grid-row-end: 11 }
+.g-row-end-12 { grid-row-end: 12 }
+.g-row-end-13 { grid-row-end: 13 }
+.g-row-end-14 { grid-row-end: 14 }
+.g-row-end-15 { grid-row-end: 15 }
+.g-row-end-16 { grid-row-end: 16 }
+.g-row-end-17 { grid-row-end: 17 }
+.g-row-end-18 { grid-row-end: 18 }
+.g-row-end-19 { grid-row-end: 19 }
+.g-row-end-20 { grid-row-end: 20 }
