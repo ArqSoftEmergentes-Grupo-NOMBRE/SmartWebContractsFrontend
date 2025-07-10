@@ -34,18 +34,34 @@
             Ver en Etherscan
           </a>
 
-          <div class="flex justify-center gap-2 mt-auto">
+          <div class="flex flex-col gap-2 mt-auto">
             <Button
                 label="Ver detalles"
-                class="bg-[#ff7a00] border-none px-4 py-2 text-sm font-semibold"
+                class="w-full bg-[#ff7a00] border-none px-4 py-2 text-sm font-semibold"
                 @click="viewing = { ...c, index }"
             />
-            <Button
-                label="Subir Entrega"
-                class="bg-[#ff7a00] border-none px-4 py-2 text-sm font-semibold"
-                @click="submitting = { ...c, index }"
-            />
+            <template v-if="c.status === 'CREADO'">
+              <Button
+                  label="Aceptar"
+                  class="w-full bg-green-600 border-none px-4 py-2 text-sm font-semibold"
+                  @click="updateContractStatus(c.id, 'APROBADO')"
+              />
+              <Button
+                  label="Rechazar"
+                  class="w-full bg-red-600 border-none px-4 py-2 text-sm font-semibold"
+                  @click="updateContractStatus(c.id, 'RECHAZADO')"
+              />
+            </template>
+            <template v-else>
+              <Button
+                  label="Subir Entrega"
+                  class="w-full bg-[#ff7a00] border-none px-4 py-2 text-sm font-semibold"
+                  @click="submitting = { ...c, index }"
+              />
+            </template>
           </div>
+
+
         </div>
 
         <div :class="['text-center py-2 font-semibold', statusColor(c.status)]">
@@ -165,6 +181,30 @@ export default {
 
       this.submitting = null;
     },
+    updateContractStatus(contractId, status) {
+      axios
+          .put(`http://localhost:8080/api/contracts/${contractId}/status`, null, {
+            params: { status },
+          })
+          .then(() => {
+            this.$toast.add({
+              severity: "success",
+              summary: `Contrato ${status}`,
+              detail: `El contrato ha sido ${status.toLowerCase()}`,
+              life: 2500,
+            });
+            this.getContracts(); // recargar lista
+          })
+          .catch(() => {
+            this.$toast.add({
+              severity: "error",
+              summary: "Error al actualizar estado",
+              detail: "No se pudo cambiar el estado del contrato.",
+              life: 3000,
+            });
+          });
+    }
+
   },
 };
 </script>
