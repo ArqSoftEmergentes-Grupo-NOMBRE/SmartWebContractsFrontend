@@ -1,87 +1,60 @@
-<!-- src/components/ViewSubmissions.vue -->
 <template>
-  <!-- Overlay -->
   <div
       class="text-white absolute inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm"
       @click.self="$emit('close')"
   >
     <div class="bg-neutral-900 rounded-2xl p-8 w-[90vw] max-w-3xl space-y-6">
-      <!-- título del contrato -->
       <h1 class="text-2xl md:text-3xl font-bold text-center">
-        {{ viewing.title || `Contrato #${viewing.index}` }}
+        Contrato #{{ viewing.index }}
       </h1>
-      
-      <p class="text-center">{{viewing.description}}</p>
-      
-      <!-- estado de carga / error -->
-      <div v-if="loading" class="text-center text-neutral-400 py-8">
-        Cargando entregas…
+
+      <!-- Navegación -->
+      <div class="flex items-center text-xl font-bold">
+        <i
+            class="pi pi-chevron-left cursor-pointer"
+            v-if="milestoneIndex > 0"
+            @click="milestoneIndex--"
+        />
+        <span class="mx-3">Hito {{ milestoneIndex + 1 }}</span>
+        <i
+            class="pi pi-chevron-right cursor-pointer"
+            v-if="milestoneIndex < viewing.entregables.length - 1"
+            @click="milestoneIndex++"
+        />
+        <span class="ml-auto text-sm text-neutral-400">
+          Total: {{ viewing.entregables.length }} entregable(s)
+        </span>
       </div>
-      <div v-else-if="error" class="text-center text-red-400 py-8">
-        {{ error }}
-      </div>
-      
-      <!-- CONTENIDO SOLO CUANDO HAY DATA -->
-      <template v-else>
-        <!-- navegación de hitos -->
-        <div class="flex items-center text-xl font-bold">
-          <i
-              class="pi pi-chevron-left cursor-pointer"
-              v-if="milestoneIndex"
-              @click="milestoneIndex--"
-          />
-          <span class="mx-3">Hito {{ milestoneIndex + 1 }}</span>
-          <i
-              class="pi pi-chevron-right cursor-pointer"
-              v-if="milestoneIndex < maxMilestone"
-              @click="milestoneIndex++"
-          />
-          <span class="ml-auto text-sm text-neutral-400">
-            Total: {{ currentSubs.length }} entrega(s)
-          </span>
-        </div>
-        
-        <hr class="border-neutral-700" />
-        
-        <!-- lista -->
-        <div
-            v-if="currentSubs.length"
-            class="space-y-4 max-h-[50vh] overflow-y-auto pr-1"
-        >
-          <div
-              v-for="(s, i) in currentSubs"
-              :key="i"
-              class="bg-neutral-800 rounded-lg p-4 space-y-2"
-          >
-            <div class="flex justify-between items-center">
-              <a
-                  :href="s.submission.url"
-                  target="_blank"
-                  class="text-[#ff7a00] hover:underline break-all"
-              >
-                {{ s.submission.url }}
-              </a>
-              <span
-                  :class="[
-                  'text-xs font-semibold px-2 py-1 rounded',
-                  statusColor(s.submission.status)
-                ]"
-              >
-                {{ s.submission.status }}
-              </span>
-            </div>
-            <p class="text-sm text-neutral-300">
-              {{ s.submission.comments }}
-            </p>
+
+      <hr class="border-neutral-700" />
+
+      <!-- Entregable actual -->
+      <div v-if="currentMilestone" class="space-y-2">
+        <div class="bg-neutral-800 rounded-lg p-4">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-[#ff7a00] font-semibold">{{ currentMilestone.titulo }}</span>
+            <span :class="['text-xs font-semibold px-2 py-1 rounded', statusColor(currentMilestone.estado)]">
+              {{ currentMilestone.estado }}
+            </span>
+          </div>
+          <p class="text-sm text-neutral-300 mb-2">{{ currentMilestone.descripcion }}</p>
+
+          <p class="text-xs text-neutral-400">
+            Fecha esperada: {{ formatDate(currentMilestone.fechaEntregaEsperada) }}
+          </p>
+
+          <div v-if="currentMilestone.archivoEntregadoURL" class="mt-2">
+            <a :href="currentMilestone.archivoEntregadoURL" class="text-[#00ccff] text-sm underline" target="_blank">
+              Ver archivo entregado
+            </a>
           </div>
         </div>
-        
-        <div v-else class="text-center text-neutral-400">
-          No hay entregas para este hito.
-        </div>
-      </template>
-      
-      <!-- botón cerrar -->
+      </div>
+
+      <div v-else class="text-center text-neutral-400">
+        No hay entregables en este contrato.
+      </div>
+
       <Button
           label="Cerrar"
           class="w-full bg-[#ff7a00] text-black font-semibold border-none h-11 mt-4"
@@ -92,76 +65,49 @@
 </template>
 
 <script>
-import axios  from "axios";
 import Button from "primevue/button";
 
 export default {
   name: "ViewSubmissions",
   components: { Button },
-  
-  /** props:
-   *  - index  : número/id del contrato (obligatorio)
-   *  - title  : título opcional para mostrar
-   *  - apiUrl : raíz del backend (opcional, default localhost)
-   */
   props: {
     viewing: { type: Object, required: true },
-    apiUrl: { type: String, default: "https://contracts.backend.tarket.site:3029" },
   },
-  
   data() {
     return {
-      submissions   : [],
       milestoneIndex: 0,
-      loading: true,
-      error  : "",
     };
   },
-  
   computed: {
-    maxMilestone() {
-      return this.submissions.length
-          ? Math.max(...this.submissions.map((s) => s.milestone))
-          : 0;
-    },
-    currentSubs() {
-      return this.submissions.filter(
-          (s) => s.milestone === this.milestoneIndex
-      );
+    currentMilestone() {
+      return this.viewing.entregables?.[this.milestoneIndex] || null;
     },
   },
-  
   methods: {
-    statusColor(s) {
-      return s === "Approved"
-          ? "bg-green-600"
-          : s === "Pending"
-              ? "bg-[#ff7a00]"
-              : "bg-red-600";
+    formatDate(dateStr) {
+      if (!dateStr) return "—";
+      const d = new Date(dateStr);
+      return d.toLocaleDateString("es-PE", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      });
     },
-    
-    fetchSubs() {
-      this.loading = true;
-      axios
-          .get(`${this.apiUrl}/milestones/${this.viewing.index}`)
-          .then((r) => {
-            this.submissions   = Array.isArray(r.data) ? r.data : [];
-            this.milestoneIndex = 0;
-            this.loading = false;
-          })
-          .catch(() => {
-            this.error   = "Error al obtener entregas";
-            this.loading = false;
-          });
+    statusColor(status) {
+      switch (status) {
+        case "PENDIENTE":
+          return "bg-[#ff7a00]";
+        case "ENTREGADO":
+          return "bg-blue-600";
+        case "APROBADO":
+          return "bg-green-600";
+        case "RECHAZADO":
+          return "bg-red-600";
+        default:
+          return "bg-neutral-600";
+      }
     },
   },
-  
-  watch: {
-    /** vuelve a cargar si cambia el índice que recibe */
-    index() { this.fetchSubs(); },
-  },
-  
-  created() { this.fetchSubs(); },
 };
 </script>
 

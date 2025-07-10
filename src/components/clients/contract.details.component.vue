@@ -7,7 +7,7 @@
     <!-- VENTANA -->
     <div class="w-full max-w-3xl bg-neutral-900 text-white rounded-2xl p-8 space-y-8">
       <h2 class="text-2xl font-bold">Detalles de contrato</h2>
-      
+
       <!-- ---------- FORMULARIO ---------- -->
       <div class="space-y-6">
         <!-- Título -->
@@ -18,7 +18,7 @@
               class="w-full h-11 bg-transparent border border-neutral-500 rounded-md px-3"
           />
         </div>
-        
+
         <!-- Descripción -->
         <div>
           <label class="block mb-1 text-sm font-medium">Descripción del proyecto</label>
@@ -29,7 +29,7 @@
               class="w-full bg-transparent border border-neutral-500 rounded-md px-3 py-2"
           />
         </div>
-        
+
         <!-- Archivos -->
         <div>
           <label class="block mb-2 text-sm font-medium">
@@ -42,7 +42,7 @@
           />
         </div>
       </div>
-      
+
       <!-- ---------- BOTONES ---------- -->
       <div class="flex justify-between pt-4">
         <Button
@@ -70,11 +70,11 @@ import Button        from "primevue/button";
 export default {
   name: "ContractDetailsModal",
   components: { InputText, InputTextarea, FileUpload, Button },
-  
+
   props: {
     contract: { type: Object, required: true }, // objeto de creación recibido del padre
   },
-  
+
   data() {
     return {
       // copia local para editar hasta confirmar
@@ -85,7 +85,7 @@ export default {
       },
     };
   },
-  
+
   methods: {
     nextStep() {
       // envía los datos al padre y avanza
