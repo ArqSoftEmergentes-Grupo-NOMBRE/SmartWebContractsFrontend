@@ -52,13 +52,21 @@
                   @click="updateContractStatus(c.id, 'RECHAZADO')"
               />
             </template>
-            <template v-else>
-              <Button
-                  label="Subir Entrega"
-                  class="w-full bg-[#ff7a00] border-none px-4 py-2 text-sm font-semibold"
-                  @click="submitting = { ...c, index }"
-              />
+            <template v-if="c.status === 'APROBADO' && Array.isArray(c.entregables)">
+              <template v-for="entregable in c.entregables" :key="entregable?.id">
+                <Button
+                    v-if="!entregable?.archivoEntregadoURL"
+                    label="Subir Entrega"
+                    class="w-full bg-[#ff7a00] border-none px-4 py-2 text-sm font-semibold"
+                    @click="submitting = entregable"
+                />
+              </template>
             </template>
+
+
+
+
+
           </div>
 
 
@@ -81,10 +89,11 @@
 
     <SubmitComponent
         v-if="submitting"
+        :entregable="submitting"
         @cancel="submitting = null"
-        :submitting="submitting"
         @send="submitDelivery"
     />
+
     <ViewSubmissions
         v-if="viewing"
         @close="viewing = null"
@@ -162,25 +171,35 @@ export default {
       }
     },
     submitDelivery(payload) {
-      const contractIndex = payload.index;
-      const contract = this.contracts[contractIndex];
+      const { entregableId, url, comments, final } = payload;
 
-      console.log("🧪 Entrega simulada enviada:", {
-        contrato: contract?.id,
-        milestone: payload?.milestone,
-        url: payload?.url,
-        comentarios: payload?.comments,
-      });
-
-      this.$toast.add({
-        severity: "success",
-        summary: "Entrega registrada (simulada)",
-        detail: `Milestone: ${payload.milestone?.titulo || "Sin título"}`,
-        life: 2500,
-      });
-
-      this.submitting = null;
+      axios
+          .put(`http://localhost:8080/api/contracts/deliverables/${entregableId}/submit`, {
+            archivoEntregadoURL: url,
+            comentarios: comments,
+            final: final
+          })
+          .then(() => {
+            this.$toast.add({
+              severity: "success",
+              summary: "Entrega enviada",
+              detail: "El entregable ha sido actualizado correctamente.",
+              life: 2500,
+            });
+            this.submitting = null;
+            this.getContracts(); // Recargar los contratos actualizados
+          })
+          .catch((error) => {
+            console.error(error);
+            this.$toast.add({
+              severity: "error",
+              summary: "Error al subir entrega",
+              detail: "No se pudo enviar el entregable.",
+              life: 3000,
+            });
+          });
     },
+
     updateContractStatus(contractId, status) {
       axios
           .put(`http://localhost:8080/api/contracts/${contractId}/status`, null, {
