@@ -58,15 +58,10 @@
                     v-if="!entregable?.archivoEntregadoURL"
                     label="Subir Entrega"
                     class="w-full bg-[#ff7a00] border-none px-4 py-2 text-sm font-semibold"
-                    @click="submitting = entregable"
+                    @click="submitting = { entregable, contractId: c.id }"
                 />
               </template>
             </template>
-
-
-
-
-
           </div>
 
 
@@ -89,10 +84,12 @@
 
     <SubmitComponent
         v-if="submitting"
-        :entregable="submitting"
+        :entregable="submitting.entregable"
+        :contractId="submitting.contractId"
         @cancel="submitting = null"
         @send="submitDelivery"
     />
+
 
     <ViewSubmissions
         v-if="viewing"
@@ -171,13 +168,13 @@ export default {
       }
     },
     submitDelivery(payload) {
-      const { entregableId, url, comments, final } = payload;
+      const { entregableId, contractId, url, comments, final } = payload;
 
       axios
-          .put(`http://localhost:8080/api/contracts/deliverables/${entregableId}/submit`, {
+          .put(`http://localhost:8080/api/contracts/${contractId}/deliverables/${entregableId}/submission`, {
             archivoEntregadoURL: url,
-            comentarios: comments,
-            final: final
+            descripcion: comments, // ✅ correcto ahora
+            estado: "ENTREGADO",   // ✅ siempre marcar como entregado
           })
           .then(() => {
             this.$toast.add({
@@ -187,7 +184,7 @@ export default {
               life: 2500,
             });
             this.submitting = null;
-            this.getContracts(); // Recargar los contratos actualizados
+            this.getContracts(); // Refrescar contratos
           })
           .catch((error) => {
             console.error(error);
